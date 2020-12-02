@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  simpleproject:
+    container_name: simpleproject_container
+    image: ${DOCKER_REGISTRY-}simpleproject
+    build:
+      context: .
+      dockerfile: SimpleProject/Dockerfile
+    ports:
+      - '5001:80'
